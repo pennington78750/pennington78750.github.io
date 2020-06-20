@@ -1,0 +1,136 @@
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Oswald;
+    src: url("../font/Oswald-VariableFont_wght.ttf");
+}
+html {
+    font-family: Oswald;
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    letter-spacing: .2rem;
+}
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: rgba(22, 22, 22, 0.7);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem 0;
+    box-shadow: 0 0 5rem rgba(22, 22, 22, 0.1);
+}
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* nav-link */
+.nav-link {
+    margin-left: 5rem;
+}
+/* menu-bar hide */
+.menu-bar {
+    display: none;
+}
+/* banner-area */
+.banner-area {
+    background: linear-gradient(80deg, #2aaa69, #4bbb96);
+}
+/* banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.banner h1 {
+    text-transform: uppercase;
+}
+/* responsive */
+@media (max-width: 900px) {
+    /* menu-bar show */
+    .menu-bar {
+        position: relative;
+        display: block;
+        cursor: pointer;
+    }
+    .bar {
+        width: 2.2rem;
+        height: .2rem;
+        background: rgba(22, 22, 22, 0.7);
+        margin: .4rem;
+        border-radius: 5rem;
+        transition: all 0.5s ease-in-out;
+    }
+    .bar2 {
+        width: 1.5rem;
+        margin-left: auto;
+    }
+    .bar3 {
+        width: 1rem;
+        margin-left: auto;
+    }
+    /* logo */
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 300;
+        order: 3;
+    }
+    /* nav-menu */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: background 0.5s ease-in-out;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .nav-item {
+        position: absolute;
+        left: -35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 35rem;
+        height: 100%;
+        background: #c9233e;
+        transition: left 0.5s ease-in-out;
+    }
+    .nav-link {
+        margin-left: 0;
+        font-weight: 600;
+    }
+    .banner h1 {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    /* class add by javascript */
+    .nav-menu.active {
+        background: rgba(22, 22, 22, 0.1);
+        pointer-events: all;
+    }
+    .nav-item.active {
+        left: 0;
+    }
+}
